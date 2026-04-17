@@ -3,6 +3,7 @@
   "public": true,
   "name": "diario-de-bordo",
   "rewrites": [
+    { "source": "/", "destination": "/diario_chroma.html" },
     { "source": "/api/(.*)", "destination": "/api/$1" }
   ],
   "headers": [
