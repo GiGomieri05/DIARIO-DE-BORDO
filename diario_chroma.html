@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diário de Bordo — Chroma</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="logo-icon">🚀</div>
+    <div>
+      <h1>Diário de Bordo</h1>
+      <p>Escola Chroma — Giovanni de Luca</p>
+    </div>
+  </div>
+  <div class="header-actions">
+    <span id="file-status" class="file-status">Nenhum arquivo vinculado</span>
+    <!-- Local file mode buttons -->
+    <button class="btn btn-ghost" id="unlink-btn" onclick="unlinkFile()" style="display:none" title="Desvincular arquivo">🔗</button>
+    <button class="btn btn-ghost local-mode" onclick="openFile()">Abrir arquivo</button>
+    <!-- Web mode buttons -->
+    <button class="btn btn-ghost web-mode" onclick="document.getElementById('import-input').click()" style="display:none">Importar JSON</button>
+    <input type="file" id="import-input" accept=".json" style="display:none" onchange="handleImport(this)">
+    <button class="btn btn-ghost web-mode" onclick="exportJSON()" style="display:none">Exportar JSON</button>
+    <!-- Common button -->
+    <button class="btn btn-primary" onclick="saveFile()">Salvar</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="hoje">📅 Aulas de Hoje</button>
+  <button class="tab-btn" data-tab="diasemana">📆 Dia a Dia</button>
+  <button class="tab-btn" data-tab="turmas">🏫 Por Turma</button>
+</nav>
+
+<main>
+
+  <!-- ===================== TAB: HOJE ===================== -->
+  <div id="tab-hoje" class="tab-panel active">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Aulas de Hoje</div>
+        <div class="section-subtitle">Preencha conforme o dia avança</div>
+      </div>
+    </div>
+
+    <div class="date-bar">
+      <label>Data</label>
+      <input type="date" id="hoje-date" onchange="renderHoje()">
+      <button class="btn btn-ghost" onclick="setToday()" style="font-size:0.75rem;padding:7px 12px;">Hoje</button>
+    </div>
+
+    <div class="table-wrap">
+      <table id="hoje-table">
+        <thead>
+          <tr>
+            <th>Horário</th>
+            <th>Polo</th>
+            <th>Aula</th>
+            <th>Tema</th>
+          </tr>
+        </thead>
+        <tbody id="hoje-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="save-bar">
+      <div class="save-dot" id="save-dot"></div>
+      <span id="save-label">Sem alterações</span>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: DIA A DIA ===================== -->
+  <div id="tab-diasemana" class="tab-panel">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Dia a Dia</div>
+        <div class="section-subtitle">Histórico completo por data</div>
+      </div>
+      <button class="btn btn-ghost" onclick="addDay()" style="font-size:0.78rem;">+ Novo dia</button>
+    </div>
+    <div id="days-list"></div>
+  </div>
+
+  <!-- ===================== TAB: TURMAS ===================== -->
+  <div id="tab-turmas" class="tab-panel">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Por Turma</div>
+        <div class="section-subtitle">Polo + horário = turma</div>
+      </div>
+    </div>
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label>Horário</label>
+        <select id="filter-horario" onchange="renderTurmas()">
+          <option value="">Todos</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Polo</label>
+        <input type="text" id="filter-polo" placeholder="2" oninput="renderTurmas()">
+      </div>
+      <button class="btn btn-ghost" onclick="clearTurmaFilters()">Limpar</button>
+    </div>
+    <div id="turmas-grid" class="turma-grid"></div>
+  </div>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal-overlay">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <p id="modal-body"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
+      <button class="btn btn-primary" id="modal-confirm">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

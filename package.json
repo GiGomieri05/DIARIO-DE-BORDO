@@ -1,0 +1,13 @@
+{
+  "name": "diario-de-bordo",
+  "version": "1.0.0",
+  "description": "Diário de Bordo - Escola Chroma",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}

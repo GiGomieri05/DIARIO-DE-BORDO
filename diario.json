@@ -1,0 +1,128 @@
+{
+  "2026-03-28": [
+    {
+      "polo": "3",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "3",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "3",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "3",
+      "aula": "Informática",
+      "tema": "Gato e Rato"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Peças de um PC"
+    }
+  ],
+  "2026-04-11": [
+    {
+      "polo": "3",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1)"
+    },
+    {
+      "polo": "4",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1 - Numbers)"
+    },
+    {
+      "polo": "3",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1)"
+    },
+    {
+      "polo": "4",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1/A2)"
+    },
+    {
+      "polo": "3",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1)"
+    },
+    {
+      "polo": "4",
+      "aula": "Inglês",
+      "tema": "Theorical Phrase formation + Space Mission (A1)"
+    },
+    {
+      "polo": "3",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1)"
+    },
+    {
+      "polo": "4",
+      "aula": "Inglês",
+      "tema": "Space Mission (A1)"
+    }
+  ],
+  "2026-04-04": [
+    {
+      "polo": "2",
+      "aula": "Inglês",
+      "tema": "Música da Moana"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Criando um jogo com o PowerPoint"
+    },
+    {
+      "polo": "2",
+      "aula": "Inglês",
+      "tema": "Describe the Image"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Criando um jogo com o PowerPoint"
+    },
+    {
+      "polo": "2",
+      "aula": "Inglês",
+      "tema": "Easter Mission v2 (A1-A2)"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Binários"
+    },
+    {
+      "polo": "2",
+      "aula": "Inglês",
+      "tema": "Easter Mission v3 (A1)"
+    },
+    {
+      "polo": "2",
+      "aula": "Informática",
+      "tema": "Criptografia"
+    }
+  ]
+}
